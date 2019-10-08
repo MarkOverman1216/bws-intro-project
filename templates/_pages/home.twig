@@ -1,17 +1,165 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
+{% set contentWidth = "normal" %}
+{% set header1 = "We create applications that make CRA compliance management easy." %}
+{% set header2 = "Streamline your volunteer activity recordkeeping and compliance workflow." %}
+{% set header3 = "Rappore is a RegTech start-up built upon industry experience with the goal of simplifying compliance processes." %}
+{% set headerDesc1 = "Rappore is a RegTech start-up that leverages innovation to help compliance officers tell their CRA story and demonstrate how bank associates serve their communities."%}
+{% set headerDesc2 = "Tired of logging into a separate system (or worse, a spreadsheet) and using valuable time to log and verify CRA volunteer hours? Make it easy for employees to report their volunteer activities by logging hours directly from their Outlook calendar."%}
+{% set headerDesc3 = ["We've experienced the same pain points you do, they're the same pain points experienced by many compliance officers in banks all across the country. We know from per­son­al expe­ri­ence how frus­trat­ing it can be to man­age the doc­u­men­ta­tion require­ments for CRA vol­un­teer ser­vices. We know CRA com­pli­ance inside and out, and we’ve decid­ed to do some­thing to help.", "We aren’t a fan­cy tech­nol­o­gy com­pa­ny that doesn’t know what your com­pli­ance pain points are — we under­stand the indus­try needs and how to help address them. We are lever­ag­ing inno­va­tion to help you more eas­i­ly tell your bank’s CRA story."]%}
+{% set lastQuestion = "Ready to see how Rappore can simplify your compliance workflow?" %}
 {% extends "_layouts/_layout.twig" %}
 
-{% block _inline_css %}
-{% endblock %}
+{% block _inline_css %}{% endblock %}
 
 {% block content %}
-<section class="section is-small animatable">
-    <div class="page-container">
-        <h1>Welcome to Craft Starter</h1>
-        <p>Looks like you set up the proper page template structure. Lets get this new website up and running!</p>
+  <section class="section is-large">
+    <div class="page-container content-container">
+      <div class="header-nav desktop-nav">
+        <div class="logo-container">
+          <a>rappore</a>
+        </div>
+        <ul class="menu">
+          <li class="menu-item">
+            <a>LOG IN</a>
+          </li>
+          <li class="menu-item">
+            <a>REQUEST A DEMO</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <h3 style="font-weight:bold">
+          {{header1}}
+        </h3>
+        <p>
+          {{headerDesc1}}
+        </p>
+      </div>
     </div>
-</section>
-{% endblock %}
+  </section>
 
-{% block _inline_js %}
+  <section class="section is-large">
+    <div class="page-container">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="cell large-5 large-offset-1 content-container">
+            <div class="content">
+              <h3 style="font-weight:bold">
+                {{header2}}
+              </h3>
+              <p>
+                {{headerDesc2}}
+              </p>
+              <a class="button">REQUEST A DEMO</a>
+              <a class="button" style="background-color:white; color: #0076cc">LEARN MORE</a>
+            </div>
+          </div>
+          <div class="cell large-6">
+            <div class="content">
+              <img src="http://rappore.boyerwebstudios.com/imager/siteassets/74/placeholder_product_screenshot_76e2ad6757.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section is-large is-dark" style="background-color: #0076cc">
+    <div class="page-container">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="cell large-8 large-offset-1">
+            <div class="content">
+              <p class="subheading">WHAT IS RAPPORE?</p>
+              <h3 style="font-weight:bold">{{header3}}
+              </h3>
+              {% for paragraph in headerDesc3 %}
+                <p>{{paragraph}}</p>
+              {% endfor %}
+              <a style="border-bottom: 3px solid white; color: white;">READ MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section is-large is-dark" style="background-color: #003053">
+    <div class="page-container">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x is-centered">
+          <div class="cell large-8">
+            <div class="content">
+              <h3 style="font-weight:bold">{{lastQuestion}}
+                <a style="border-bottom: 3px solid">Request a demo.</a>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section is-small">
+    <div class="page-container">
+      <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+          <div class="cell large-3">
+            <div class="content">
+              <h3 style="font-weight:bold ">
+                <a>rappore</a>
+              </h3>
+              <p>A regTech start-up simplifying CRA compliance through innovation</p>
+            </div>
+          </div>
+          <div class="cell large-1 large-offset-5">
+            <div class="content">
+              <p>COMPANY</p>
+              <ul class="vertical menu">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">Products</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Get in touch</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="cell large-1">
+            <div class="content">
+              <p>APP</p>
+              <ul class="vertical menu">
+                <li>
+                  <a href="#">Login</a>
+                </li>
+                <li>
+                  <a href="#">Request a demo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="cell large-1">
+            <div class="content">
+              <p>CONTACT US</p>
+              <ul class="vertical menu">
+                <li>
+                  <a href="#">General contact</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+                <li>
+                  <a href="#">info@rappore.io</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}
+{% block _inline_js %}{% endblock %}

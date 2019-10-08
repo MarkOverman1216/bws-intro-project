@@ -1,18 +1,18 @@
-/* 
+/*
 ** style.scss - you'll be making most of your changes here.
 **
-** Refer to the _variables.scss file to set up some of the more 
-** commonly-used settings for individual sites! 
+** Refer to the _variables.scss file to set up some of the more
+** commonly-used settings for individual sites!
 */
 @charset "utf-8";
 
 /******************** Imports ********************/
-@import "fonts";
-@import "variables";
-@import "functions";
-@import "animations";
+@import 'fonts';
+@import 'variables';
+@import 'functions';
+@import 'animations';
 
-@import "foundation-settings";
+@import 'foundation-settings';
 @import '~foundation-sites/scss/foundation';
 
 @import 'lity/dist/lity.css';
@@ -43,12 +43,12 @@ $hamburger-layer-width: 35px;
 $hamburger-layer-height: 3px;
 $hamburger-layer-spacing: 6px;
 $hamburger-types: ('squeeze');
-$hamburger-layer-color: #FFFFFF;
+$hamburger-layer-color: #ffffff;
 $hamburger-hover-opacity: 1;
 @import 'hamburgers/_sass/hamburgers/hamburgers';
 
 // Common Styles (overrides and utilities)
-@import "common";
+@import 'common';
 
 /******************** General Styles ********************/
 a.logo {
@@ -56,13 +56,14 @@ a.logo {
   display: flex;
   justify-content: center;
 
-  .svg, img {
+  .svg,
+  img {
     height: 35px;
     width: auto;
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     right: 0;
@@ -79,7 +80,7 @@ a.logo {
   padding-bottom: 5px;
 }
 
-// Buttons 
+// Buttons
 .button {
   padding: 0.8rem 1.3rem;
   margin-bottom: 0.5rem;
@@ -92,14 +93,15 @@ a.logo {
 
   font-size: px-to-em(16px);
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: 0.03em;
-  
+
   &:not(:only-of-type, :last-of-type) {
     margin-right: 0.7rem;
   }
 
-  transition: transform $fast-transition-speed $easeInOutCubic, background-color $fast-transition-speed $easeInOutCubic, border $fast-transition-speed $easeInOutCubic, color $fast-transition-speed $easeInOutCubic;
+  transition: transform $fast-transition-speed $easeInOutCubic, background-color $fast-transition-speed $easeInOutCubic,
+    border $fast-transition-speed $easeInOutCubic, color $fast-transition-speed $easeInOutCubic;
 
   &:hover {
     background: darken($primary-accent, 20);
@@ -129,16 +131,17 @@ a.logo {
   border-color: $primary-accent;
   color: $primary-accent;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background: rgba($primary-accent, 1);
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
 
 .button.text {
   padding: 0.4rem 0;
   background: none;
-  
+
   color: rgba($body-text-color, 1);
   border: none;
   border-bottom: 2px solid rgba($body-text-color, 1);
@@ -153,33 +156,38 @@ a.logo {
   }
 }
 
-.is-dark .button, .button.is-light {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
+.is-dark .button,
+.button.is-light {
+  background: #ffffff;
+  border-color: #ffffff;
   color: $primary-accent;
 
-  &:hover, &:active {
-    border-color: #DFDFDF;
-    background: #DFDFDF;
+  &:hover,
+  &:active {
+    border-color: #dfdfdf;
+    background: #dfdfdf;
     color: $primary-accent;
   }
 }
 
-.is-dark .button.text, .button.is-light.text {
+.is-dark .button.text,
+.button.is-light.text {
   background: none;
   border: none;
-  border-bottom: 2px solid #FFFFFF;
-  color: rgba(#FFFFFF, 1);
+  border-bottom: 2px solid #ffffff;
+  color: rgba(#ffffff, 1);
 }
 
-.is-dark .button.secondary, .button.is-light.secondary {
-  background: rgba(#FFFFFF, 0);
-  border-color: #FFFFFF;
-  color: #FFFFFF;
+.is-dark .button.secondary,
+.button.is-light.secondary {
+  background: rgba(#ffffff, 0);
+  border-color: #ffffff;
+  color: #ffffff;
 
-  &:hover, &:active {
-    border-color: #FFFFFF;
-    background: #FFFFFF;
+  &:hover,
+  &:active {
+    border-color: #ffffff;
+    background: #ffffff;
     color: $primary-accent;
   }
 }
@@ -187,18 +195,22 @@ a.logo {
 // Navigation
 header.site-header {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #DDDDDD;
+  border-bottom: 1px solid #dddddd;
 
   nav.main-nav .nav-logo {
     display: inline-block;
   }
-} 
+}
 
 // Footer
 
 footer.site-footer {
   padding: 1rem 0;
-  border-top: 1px solid #DDDDDD;
+  border-top: 1px solid #dddddd;
 }
 
 /******************** Block Styles ********************/
+
+h3 {
+  font-weight: bold;
+}

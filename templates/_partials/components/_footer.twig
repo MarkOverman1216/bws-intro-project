@@ -1,9 +1,15 @@
 {# @var craft \craft\web\twig\variables\CraftVariable #}
 <footer class="site-footer animatable">
-    <div class="page-container">
-        <div class="copyright">
-            {#{{ footerInfo.copyright|replace('{year}', now|date('Y')) }}#}
-            &copy;{{ now|date('Y') }}
-        </div>
+  <div class="page-container">
+    <div
+      class="copyright">
+      {#{{ footerInfo.copyright|replace('{year}', now|date('Y')) }}#}
+      <span>Privacy Policy</span>
+      <span>&copy;{{ now|date('Y') }}
+        HRB Design LLC
+      </span>
+      <span class="bullet">•</span>
+      <span>Site by Boyer Web Studios</span>
     </div>
+  </div>
 </footer>
