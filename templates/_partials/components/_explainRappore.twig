@@ -1,0 +1,22 @@
+{% set header = "Rappore is a RegTech start-up built upon industry experience with the goal of simplifying compliance processes." %}
+{% set desc = ["We've experienced the same pain points you do, they're the same pain points experienced by many compliance officers in banks all across the country. We know from per­son­al expe­ri­ence how frus­trat­ing it can be to man­age the doc­u­men­ta­tion require­ments for CRA vol­un­teer ser­vices. We know CRA com­pli­ance inside and out, and we’ve decid­ed to do some­thing to help.", "We aren’t a fan­cy tech­nol­o­gy com­pa­ny that doesn’t know what your com­pli­ance pain points are — we under­stand the indus­try needs and how to help address them. We are lever­ag­ing inno­va­tion to help you more eas­i­ly tell your bank’s CRA story."]%}
+
+<section class="section is-large is-dark" style="background-color: #0076cc">
+  <div class="page-container">
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-1">
+          <div class="content">
+            <p class="subheading">WHAT IS RAPPORE?</p>
+            <h3 style="font-weight:bold">{{header}}
+            </h3>
+            {% for paragraph in desc %}
+              <p>{{paragraph}}</p>
+            {% endfor %}
+            <a style="border-bottom: 3px solid white; color: white;">READ MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
